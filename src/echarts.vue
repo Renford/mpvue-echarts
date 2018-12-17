@@ -89,12 +89,16 @@ export default {
     },
     canvasToTempFilePath(opt) {
       const { canvasId } = this;
-      this.ctx.draw(true, () => {
-        wx.canvasToTempFilePath({
-          canvasId,
-          ...opt,
-        });
+      wx.canvasToTempFilePath({
+        canvasId,
+        ...opt
       });
+      // this.ctx.draw(true, () => {
+      // wx.canvasToTempFilePath({
+      //   canvasId,
+      //   ...opt
+      // });
+      // });
     },
     touchStart(e) {
       const { disableTouch, chart } = this;
