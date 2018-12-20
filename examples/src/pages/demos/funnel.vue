@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/dist/echarts.min'
 import mpvueEcharts from 'mpvue-echarts'
 
 function initChart (canvas, width, height) {
@@ -39,10 +39,10 @@ function initChart (canvas, width, height) {
         left: '5%',
         top: '50%',
         data: [{ value: 100, name: '展现' },
-        { value: 80, name: '点击' },
-        { value: 60, name: '访问' },
-        { value: 30, name: '咨询' },
-        { value: 10, name: '订单' }
+          { value: 80, name: '点击' },
+          { value: 60, name: '访问' },
+          { value: 30, name: '咨询' },
+          { value: 10, name: '订单' }
 
         ]
       },
@@ -120,7 +120,9 @@ export default {
 
   components: {
     mpvueEcharts
-  }
+  },
+
+  onShareAppMessage () {}
 }
 </script>
 

@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/dist/echarts.simple.min'
 import mpvueEcharts from 'mpvue-echarts'
 
 function initChart (canvas, width, height) {
@@ -70,7 +70,9 @@ export default {
 
   components: {
     mpvueEcharts
-  }
+  },
+
+  onShareAppMessage () {}
 }
 </script>
 

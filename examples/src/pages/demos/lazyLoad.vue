@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import * as echarts from '@/libs/echarts.simple.min'
+import * as echarts from 'echarts/dist/echarts.simple.min'
 import mpvueEcharts from 'mpvue-echarts'
 
 let chart = null
@@ -31,8 +31,8 @@ export default {
         color: ['#37a2da', '#32c5e9', '#67e0e3'],
         tooltip: {
           trigger: 'axis',
-          axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
           }
         },
         legend: {
@@ -136,7 +136,9 @@ export default {
       chart.setOption(this.option)
       return chart
     }
-  }
+  },
+
+  onShareAppMessage () {}
 }
 </script>
 
